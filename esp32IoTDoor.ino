@@ -11,7 +11,7 @@ Servo myservo;
 
 char WIFI_SSID[] = "SP_EEE";
 char WIFI_PASSWORD[] = "matlabt903";
-char HOST_ADDRESS[] = "a1je8kwt0ntrsy.iot.ap-southeast-1.amazonaws.com";
+char HOST_ADDRESS[] = "endpoint.iot.ap-southeast-1.amazonaws.com";
 char CLIENT_ID[] = "IoTDoor1";
 char TOPIC_PUBLISH[] = "$aws/things/IoTDoor/shadow/update";
 char TOPIC_SUBSCRIBE[] = "$aws/things/IoTDoor/shadow/get";
@@ -115,35 +115,3 @@ void loop() {
     }
   }
 }
-/*
-  if (msgReceived == 1)
-  {
-  msgReceived = 0;
-  Serial.print("Received Message:");
-  DeserializationError error = deserializeJson(doc, rcvdPayload);
-  if (error) {
-    Serial.print(F("deserializeJson() failed: "));
-    Serial.println(error.c_str());
-    return;
-  }
-  JsonObject& root = doc.as<JsonObject>();
-  const char* sensor = root["state"]["desired"]["status"];
-  Serial.println(sensor);
-  if (strcmp(root["state"]["desired"]["status"], "open") == 0) {
-    myservo.write(180);
-    sprintf(payload, "{\"state\":{\"desired\":{\"status\":\"close\"}}}");
-    if (esp32.publish(TOPIC_NAME, payload) == 0)
-    {
-      Serial.print("Publish Message:");
-      Serial.println(payload);
-    }
-    else
-    {
-      Serial.println("Publish failed");
-    }
-    delay(1000);
-    myservo.write(20);
-  }
-  }
-*/
-//}
