@@ -2,6 +2,7 @@ This project is a simple AWS IoT update from a ESP32 mircontroller. When I was w
 
 Links to projects
 https://sites.google.com/d/1bQ2orMohzJhZuNtTdGGB-_nXD85q9wmp/p/15jjSAgF2nyLn2fagubsBNfcd8CLnjVu7/edit (Still using MQTT)
+
 https://sites.google.com/view/smartclubhouseproject/side-projects/project-smart-door (continuation of the project just using ESP32)
 
 Links to AWS IoT documentation on 'Signature Version 4'
